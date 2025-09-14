@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit's Fast Food Corner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">Sumit's</a>
+            <div class="navbar-toggler" id="navbar-toggler">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav class="navbar-menu" id="navbar-menu">
+                <a href="#home-page" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">Menu</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home-page" class="page active">
+            <div class="hero-container">
+                <div class="hero-left">
+                    <h1>SUMIT'S FAST FOOD CORNER</h1>
+                    <p>Tasty Bites, Happy Vibes in Every Bite!</p>
+                    <button id="lets-go-btn" class="glowing-btn">GET DISCOUNT</button>
+                </div>
+                <div class="hero-right">
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            <!-- Images will be injected by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="form-page" class="page">
+            <div class="form-container">
+                <h2>Get a Discount!</h2>
+                <p>Fill out the form below to receive a special discount code.</p>
+                <form id="discount-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="text" id="age" name="age" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="persons">Number of Persons</label>
+                        <select id="persons" name="persons" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location (Western Mumbai)</label>
+                        <select id="location" name="location" required>
+                            <option value="" disabled selected>Select a station</option>
+                            <option value="palghar">Palghar</option>
+                            <option value="virar">Virar</option>
+                            <option value="vasai-road">Vasai Road</option>
+                            <option value="bhayandar">Bhayandar</option>
+                            <option value="mira-road">Mira Road</option>
+                            <option value="dahisar">Dahisar</option>
+                            <option value="borivali">Borivali</option>
+                            <option value="kandivali">Kandivali</option>
+                            <option value="malad">Malad</option>
+                            <option value="goregaon">Goregaon</option>
+                            <option value="andheri">Andheri</option>
+                            <option value="bandra">Bandra</option>
+                            <option value="dadar">Dadar</option>
+                            <option value="mumbai-central">Mumbai Central</option>
+                            <option value="churchgate">Churchgate</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Get My Discount</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="success-page" class="page">
+            <div class="receipt-container">
+                <div class="receipt-header">
+                    <h2>SUMIT'S FAST FOOD CORNER</h2>
+                    <p>📍 Location: Mumbai, Churchgate</p>
+                </div>
+                <div class="receipt-details">
+                    <p>📅 Date: <span id="receipt-date"></span></p>
+                    <p>🕒 Time: <span id="receipt-time"></span></p>
+                    <hr>
+                    <p>👤 Customer Name: <span id="receipt-name"></span></p>
+                    <p>🍽️ Number of People Eating: <span id="receipt-persons"></span></p>
+                </div>
+                <div class="receipt-code">
+                    <p>🎉 Your Discount Code:</p>
+                    <strong id="discount-code"></strong>
+                </div>
+                <div class="receipt-footer">
+                    <p>Please show this code at the counter to redeem your discount.</p>
+                    <p class="thanks">Thanks for choosing Sumit’s Fast Food Corner!<br>We’re excited to serve you fresh, tasty, and 100% veg fast food.</p>
+                    <p class="regards">See you soon! 😊<br>– Team Sumit’s Fast Food Corner</p>
+                </div>
+                <button id="back-btn" class="submit-btn">Back to Home</button>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <h2>About Us</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-intro">Hey there, foodie!</p>
+                        <p>Welcome to Sumit’s Fast Food Corner, your go-to spot for clean, tasty, and 100% veg fast food in Mumbai!</p>
+                        <p>We’re based in Borivali and proudly serve delicious, quick bites made with love (and lots of flavor!). From classic street-style snacks to modern munchies, we’ve got your cravings covered — fresh, fast, and always satisfying.</p>
+                    </div>
+                    <div class="about-images">
+                        <img src="food-photo-1.png" alt="A variety of delicious fast food dishes.">
+                    </div>
+                </div>
+                <div class="about-content about-content-reverse">
+                    <div class="about-text">
+                        <p>So whether you're a solo snacker or showing up with your whole gang — pull up, dig in, and enjoy the vibes.</p>
+                        <p class="about-tagline">Good food. Good mood. That’s how we roll. 😋</p>
+                    </div>
+                    <div class="about-images">
+                         <img src="food-photo-2.png" alt="A close-up of a tasty vegetarian wrap.">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews-section">
+            <div class="reviews-container">
+                <h2>What Our Friends Say</h2>
+                <div class="review-carousel-container">
+                    <div class="review-carousel-track">
+                        <!-- Reviews injected by JS -->
+                    </div>
+                    <div class="review-carousel-dots"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Sumit's Fast Food Corner</h3>
+                    <p>Tasty Bites, Happy Vibes in Every Bite!</p>
+                    <p>Borivali, Mumbai</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>For inquiries and orders, call:</p>
+                    <p class="phone-number"><a href="tel:+919763871716">+91 97638 71716</a></p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home-page">Home</a></li>
+                        <li><a href="#about">Menu</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sumit's Fast Food Corner. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- Firebase SDKs (via CDN) -->
+<script type="module">
+  // Import Firebase modules from CDN
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+
+  // Your Firebase config (already correct)
+  const firebaseConfig = {
+    apiKey: "AIzaSyBkziJnohbPTqyKPhpapOgVuR5np0Qn3WA",
+    authDomain: "myreceiptsaver-677e4.firebaseapp.com",
+    projectId: "myreceiptsaver-677e4",
+    storageBucket: "myreceiptsaver-677e4.firebasestorage.app",
+    messagingSenderId: "717265076935",
+    appId: "1:717265076935:web:c2befd926fd3c8fa60f4e2",
+    measurementId: "G-LQJC7H785F"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Expose Firestore to script.js
+  window.db = db;
+  window.addDoc = addDoc;
+  window.collection = collection;
+</script>
+
+<!-- Your main JavaScript file -->
+<script type="module" src="script.js"></script>
+</body>
+</html>
